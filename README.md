@@ -1,4 +1,4 @@
-# image_processing
+# ckm_image_processing
 
 Description.
 
@@ -17,17 +17,26 @@ Utils:
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install ckm_image_processing
 
 ```bash
-pip install image_processing
+pip install ckm_image_processing
 ```
 
 ## Usage
 
 ```python
-from paimage_processingckage_name.module1_name import file1_name
-file1_name.my_function()
+from ckm_image_processing.utils import io, plot
+from ckm_image_processing.processing import combination, transformation
+
+image1 = io.read_image('path do arquivo imagem')
+image2 = io.read_image('path do arquivo imagem')
+
+plot.plot_image(image1)
+plot.plot_image(image2)
+
+result_image = combination.transfer_histogram(image1, image2)
+plot.plot_result(image1, image2, result_image)
 ```
 
 ## Author
